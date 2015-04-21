@@ -20,14 +20,15 @@ And it is not unusual that every single person has their one special recipe for 
 So at the moment everybody has their one recipe Information to themselves, but what if you would like to try a new variation 
 of the Lasagne. 
 Maybe you know somebody who has a good recipe, so what do you do? You will ask him for the recipe information.
-But what about the other people from different countries? You can’t just walk to Rom and ask Petro about 
+But what about the other people from different countries? You can’t just walk to Rom and ask Pedro about 
 the recipe information.
+
 And that’s where Linked data comes in handy.
 In the World Wide Web you have a huge amount of Information from different kind of people from different countries.
 Every single person has their one website with the recipe information. What linked data does is to connect the Information 
 from a website to another website.
 So that means that websites with the same subject, like a lasagne recipe, can be linked to one another. 
 Linked data is very important for searching machines such as Google. 
-Because when you Google the word Lasagne the searching machine can show you a bunch of websites all related to the subject. 
+Because when you search the word "Lasagne" the searching machine can show you a bunch of websites all related to the subject. 
 Without linked data you wouldn’t have a list of options.
 
