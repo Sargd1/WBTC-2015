@@ -1,0 +1,13 @@
+<rdf:Description about="http://sargentd.ch/#me
+
+<foaf:education rdf: about="http://sargents.ch/education/university/bachelor/">
+<foaf:member rdf:resource="http://facebook.com">
+<foaf:member rdf:resource="http://instagram.com">
+<foaf:mbox rdf:resource="http://mailto:dena.sargent@bluewin.ch>
+<foaf:knows rdf:resource="http//"tamara.staufer.name/knows/who#tamara-staufer/">
+<foaf:interest rdf:resource="http://en.wikipedia.org/wiki/Running">
+
+</rdf:Description>
+
+Linked Data (what it is & Why it is important)
+-
