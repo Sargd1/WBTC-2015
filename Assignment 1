@@ -1,19 +1,24 @@
-<rdf:Description about="http://sargentd.ch/#me
+This exercise was written in the modul Web Technology at Bern University of Applied Science.
 
-<foaf:education rdf: about="http://sargents.ch/education/university/bachelor/">
-<foaf:member rdf:resource="http://facebook.com">
-<foaf:member rdf:resource="http://instagram.com">
-<foaf:mbox rdf:resource="http://mailto:dena.sargent@bluewin.ch>
-<foaf:knows rdf:resource="http//"tamara.staufer.name/knows/who#tamara-staufer/">
-<foaf:interest rdf:resource="http://en.wikipedia.org/wiki/Running">
+The first task was to design IRI patterns for my own web profile. 
+Afterwards I had to describe why I had chosen them. The last task was to explain in a short summary  
+to a five year old kid what "Linked Data" is.
 
-</rdf:Description>
+My IRI patterns:
 
-#IRI's
-http://sargent.ch/#me
-http://sargent.ch/education/university/bachelor
+http://dena.sargent.ch/#me
 http://mailto:dena.sargent@bluewin.ch
-http://en.wikipedia.org/wiki/running
+http://dena.sargent.ch/education
+http://dena.sargent.ch/education/university
+http://dena.sargent.ch/education/university/bachelor
+http://dena.sargent.ch/education/university/bachelor/Business IT
+http://dena.sargent.ch/experiences/Swisscom
+http://dena.sargent.ch/interests
+http://dena.sargent.ch/interests/sports
+http://dena.sargent.ch/interests/sports/crossfit
+
+
+I have chosen these URI's because I think my name or education an experiences will not change & will be true after a 100 years. 
 
 
 Linked Data (what it is & Why it is important)
@@ -38,4 +43,7 @@ So that means that websites with the same subject, like a lasagne recipe, can be
 Linked data is very important for searching machines such as Google. 
 Because when you search the word "Lasagne" the searching machine can show you a bunch of websites all related to the subject. 
 Without linked data you wouldn’t have a list of options.
+
+Reference 
+-https://www.youtube.com/watch?=4x_xzT5eF5Q
 
