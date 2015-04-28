@@ -4,10 +4,10 @@ This exercise was written in the modul Web Technology at Bern University of Appl
 
 In this exercise the task is to write a few triple statements.
 
-<http://dena.sargent.ch/#me> <http://xmls.com/foaf/0.1/interest> <http://en.wikipedia.org/wiki/wortkout>
-<http://dena.sargent.ch/#me> <http://xmls.com/foaf/0.1/knows> <http://tamara.staufer.ch/#i>
-<http://dena.sargent.ch/#me> <http://xmls.com/foaf/0.1/experiences> <http://dena.sargent.ch/experiences/Swisscom>
-<http://dena.sargent.ch/#me> <http://xmls.com/foaf/0.1/account> <http://instagram.com/sargentdena>
-<http://dena.sargent.ch/#me> <http://xmls.com/foaf/0.1/education> <http://dena.sargent.ch/education/university/bachelor/Business IT>
+<http://dena.sargent.ch/info> <http://xmls.com/foaf/0.1/interest> <http://en.wikipedia.org/wiki/Wortkout>
+<http://dena.sargent.ch/info> <http://xmls.com/foaf/0.1/knows> <http://tamara.staufer.ch/#i>
+<http://dena.sargent.ch/info> <http://xmls.com/foaf/0.1/experiences> <http://dena.sargent.ch/experiences/Swisscom>
+<http://dena.sargent.ch/info> <http://xmls.com/foaf/0.1/account> <http://instagram.com/sargentdena>
+<http://dena.sargent.ch/info> <http://xmls.com/foaf/0.1/education> <http://dena.sargent.ch/education/university/bachelor/BusinessIT>
 
 
