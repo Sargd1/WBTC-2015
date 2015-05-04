@@ -9,6 +9,7 @@ In this exercise the task is to write a few triple statements.
 <http://dena.sargent.ch> <http://xmls.com/foaf/0.1/knows> <http://tamara.staufer.ch/#i> .
 <http://dena.sargent.ch> <http://xmls.com/foaf/0.1/workInfoHomepage> <http://dena.sargent.ch/experiences#swisscom> .
 <http://dena.sargent.ch> <http://xmls.com/foaf/0.1/account> <http://instagram.com/sargentdena> .
+<http://dena.sargent.ch> <http://xmls.com/foaf/0.1/account> <https://facebook.com> .
 <http://dena.sargent.ch> <http://xmls.com/foaf/0.1/schoolHomepage> <http://dena.sargent.ch/education#university> .
 
 
