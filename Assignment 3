@@ -16,7 +16,7 @@ RDF & SPARQL
 
 rdf:type  foaf:Person .
 foaf:name "Dena Sargent" .
-foaf:homepage <http://dena.sargent.ch> .
+foaf:homepage rdf:resource <http://dena.sargent.ch> .
 foaf:mbox <mailto:dena.sargent@bluewin.ch>; <mailto:sargd1@bfh.ch> .
 foaf:interest <http://en.wikipedia.org/wiki/Wortkout>;<https://de.wikipedia.org/wiki/Crossfit_Games> .
 foaf:account <http://instagram.com/sargentdena> .
