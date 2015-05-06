@@ -15,15 +15,22 @@ RDF & SPARQL
 
 
 rdf:type  foaf:Person .
-foaf:name "Dena Sargent" .
+foaf:familyName "Sargent" foaf:givenName "Dena" .
 foaf:homepage rdf:resource <http://dena.sargent.ch> .
 foaf:mbox <mailto:dena.sargent@bluewin.ch>; <mailto:sargd1@bfh.ch> .
-foaf:interest <http://en.wikipedia.org/wiki/Wortkout>;<https://de.wikipedia.org/wiki/Crossfit_Games> .
+foaf:interest <http://en.wikipedia.org/wiki/Wortkout>;<http://de.wikipedia.org/wiki/Crossfit_Games>;
+http://de.wikipedia.org/wiki/Under_Armour; <http://dbpedia.org/ontology/Gymnast> .
 foaf:account <http://instagram.com/sargentdena> .
+foaf: currentProject <http://github.com/Sargd1/WBTC-2015> .
+foaf:member <http://crossfittb.ch> .
 
 
 3.2 SPARQL:
 @PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+@PREFIX owl: <http://w3.org/2002/07/owl#>
+@PREFIX dbr: <http://dbpedia.org/resource/>
+@PREFIX dbo: <http://dbpedia.org/ontology/>
+
 SELECT ?name ?mbox .
 WHERE
 { ?xfoaf:name ?name .
