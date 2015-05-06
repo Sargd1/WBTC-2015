@@ -32,7 +32,7 @@ http://www.w3.org/2009/08/skos-reference/skos.html#prefLabel
 http://worldbank.270a.info/classification/indicator/GC.DOD.TOTL.GD.ZS.html
 
 
-Exercise 4 Interesting SPARQL Queries
+Exercise  4 Interesting SPARQL Queries
 
 @PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 @PREFIX owl: <http://w3.org/2002/07/owl#>
