@@ -31,10 +31,12 @@ foaf:member <http://crossfittb.ch> .
 @PREFIX dbr: <http://dbpedia.org/resource/>
 @PREFIX dbo: <http://dbpedia.org/ontology/>
 
-SELECT ?name ?mbox .
+SELECT ?person ?city
 WHERE
-{ ?xfoaf:name ?name .
-  ?x foaf:mbox ?mbo } .
+{ ? person a dbo:Athlete owl:Gymnast
+  ? city dbr:Switzerland  
+  } 
+  LIMIT 20
 
 
 
