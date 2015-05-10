@@ -39,8 +39,8 @@ Get the Central government debt, total (% of GDP) value for Switzerland for the 
 
 SELECT ?value ?country ?year
 WHERE {
-?value a indicator:<http://worldbank.270a.info/classification/indicator/GC.DOD.TOTL.GD.ZS.html>
-?country  region:Switzerland . 
+?value a indicator:<http://worldbank.270a.info/classification/indicator/GC.DOD.TOTL.GD.ZS.html> .
+?country region:Switzerland . 
 }
 
 
