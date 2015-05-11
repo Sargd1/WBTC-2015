@@ -30,10 +30,8 @@ foaf:member <http://crossfittb.ch> .
 Get the Central government debt, total (% of GDP) value for Switzerland for the year 2008 
 
 @PREFIX rdf: <http://worldbank.270a.info/classification/indicator.html>
-@PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 @PREFIX year: <http://reference.data.gov.uk/id/year/>
 @PREFI country: <http://worldbank.270a.info/classification/country/>
-@PREFIX g-meta: <http://worldbank.270a.info/graph/meta>
 @PREFIX region: <http://worldbank.270a.info/classification/region/>
 @PREFIX indicator: <http://worldbank.270a.info/classification/indicator/>
 
@@ -66,17 +64,25 @@ Exercise  4  SPARQL Queries
 @PREFIX dbp: <http://dbpedia.org/property/>
 @PREFIX dbr: <http://dbpedia.org/resource/>
 
-SELECT ?page 
+SELECT ?name ?Place ?birth
+WHERE{
+?Criminal a <http://dbpedia.org/ontology/Criminal
+?Criminal foaf:name ?name .
+?Criminal dbo:birthplace ?Place .
+.....
+
+
 
 @PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 @PREFIX owl: <http://w3.org/2002/07/owl#>
 @PREFIX dbr: <http://dbpedia.org/resource/>
 @PREFIX dbo: <http://dbpedia.org/ontology/>
  
-SELECT ?person ?city
-WHERE
-{ ? person a dbo:Athlete owl:Gymnast
-  ? city dbr:Switzerland  
+SELECT ?person ?city ?name
+WHERE{
+?person a dbo:Athlete owl:Gymnast .
+?city dbr:Switzerland .
+?name foaf:name ?name .
   } 
   LIMIT 20
 
