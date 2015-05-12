@@ -37,13 +37,14 @@ Get the Central government debt, total (% of GDP) value for Switzerland for the 
 @PREFIX indicator: <http://worldbank.270a.info/classification/indicator/>
 @PREFIX region: <http://worldbank.270a.info/classification/region/>
 @PREFIX source: <http://worldbank.270a.info/classification/source/>
-
+PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
 
 SELECT  ?page ?country ?year
 WHERE {
 ?page a sourcer:<http://worldbank.270a.info/classification/indicator/> .
 ?property:indicator indicator:GC.DOD.TOTL.GD.ZS.
-?country region:Switzerland year:2008 . 
+?country sdmx-dimension:refPeriod year:2008 . 
+?country sdmx-dimension:refArea ?country . 
 Filter(country=country:CH)
 }
 
@@ -56,7 +57,7 @@ Get the population census value for Switzerland using the DBpedia SPARQL Endpoin
 
 SELECT ?country ?population
 WHERE {
-?country foaf:name dbr:Switzerland . 
+?country foaf:name "Switzerland"@en . 
 ?country dbprop:populationCensus ?population .
 
 }
@@ -70,10 +71,10 @@ Exercise  4  SPARQL Queries
 
 SELECT ?name ?Place ?birth
 WHERE{
-?President a <http://dbpedia.org/ontology/President>
+?President a <http://dbpedia.org/ontology/President> .
 ?President foaf:name ?name .
 ?President dbo:birthplace ?Place .
-?Place dbp:population ?pop
+?Place dbp:population ?pop .
 ?President dbo:birthDate ?birth .
 Filter(?birth > "1955-01-01"^^xsd:date)
 Filter(?pop>100000)
@@ -94,7 +95,7 @@ SELECT ?person ?city ?name
 WHERE{
 ?person a <http://dbpedia.org/ontology/Gymnast> .
 ?person dbo:Athlete owl:Gymnast .
-?city dbr:Switzerland .
+?country dbp:countryCode "Switzerland"@en .
 ?name foaf:name ?name .
 Filter(country=country:CH)
   }
@@ -110,14 +111,14 @@ SELECT ?name ?hire
 WHERE{
 
 ?employees foaf:name ?name .
-?employees foaf:
+?employees foaf:familyName foaf:givenName .
 ?employees dbo:HireDate ?hire .
-
-
+?employees ...:Job ?job
+FILTER (?hire > "2000-01-01"^^xs:date)
+FILTER (?job = "Economist")
 
   }
-  Order by ?name
-  LIMIT 50
+  LIMIT 200
 
 
 
