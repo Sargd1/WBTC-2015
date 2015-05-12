@@ -64,17 +64,24 @@ Filter (?population>10000)
 
 Exercise  4  SPARQL Queries
 
-@PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
 @PREFIX dbo: <http://dbpedia.org/ontology/>
 @PREFIX dbp: <http://dbpedia.org/property/>
 @PREFIX dbr: <http://dbpedia.org/resource/>
 
 SELECT ?name ?Place ?birth
 WHERE{
-?Criminal a <http://dbpedia.org/ontology/Criminal
-?Criminal foaf:name ?name .
-?Criminal dbo:birthplace ?Place .
-.....
+?President a <http://dbpedia.org/ontology/President>
+?President foaf:name ?name .
+?President dbo:birthplace ?Place .
+?Place dbp:population ?pop
+?President dbo:birthDate ?birth .
+Filter(?birth > "1955-01-01"^^xsd:date)
+Filter(?pop>100000)
+}
+Order by ?name
+Limit 1000
+
 
 
 
@@ -88,9 +95,17 @@ WHERE{
 ?person a dbo:Athlete owl:Gymnast .
 ?city dbr:Switzerland .
 ?name foaf:name ?name .
-  } 
-  LIMIT 20
+  }
+  Order by ?name
+  LIMIT 50
+
+
+3
 
 
 
-
+Resources:
+http://www.snee.com/bobdc.blog/2014/04/rdf-lists-and-sparql.html
+https://code.google.com/p/tdwg-rdf/wiki/Beginners6SPARQL
+http://en.wikibooks.org/wiki/XQuery/DBpedia_with_SPARQL_-_Football_teams
+http://dho.ie/sites/default/files/5%20sparql%20examples.pdf
