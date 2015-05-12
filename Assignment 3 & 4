@@ -27,26 +27,25 @@ foaf:member <http://crossfittb.ch> .
 
 3.2 SPARQL:
 
-Get the Central government debt, total (% of GDP) value for Switzerland for the year 2008 
-
 @PREFIX rdf: <http://worldbank.270a.info/classification/indicator.html>
 @PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 @PREFIX year: <http://reference.data.gov.uk/id/year/>
-@PREFI country: <http://worldbank.270a.info/classification/country/>
+@PREFIX country: <http://worldbank.270a.info/classification/country/>
 @PREFIX property: <http://worldbank.270a.info/property/>
 @PREFIX indicator: <http://worldbank.270a.info/classification/indicator/>
 @PREFIX region: <http://worldbank.270a.info/classification/region/>
 @PREFIX source: <http://worldbank.270a.info/classification/source/>
-PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+@PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
 
 SELECT  ?page ?country ?year
 WHERE {
-?page a sourcer:<http://worldbank.270a.info/classification/indicator/> .
+
 ?property:indicator indicator:GC.DOD.TOTL.GD.ZS.
 ?country sdmx-dimension:refPeriod year:2008 . 
 ?country sdmx-dimension:refArea ?country . 
 Filter(country=country:CH)
 }
+
 
 
 Get the population census value for Switzerland using the DBpedia SPARQL Endpoint.
@@ -58,7 +57,7 @@ Get the population census value for Switzerland using the DBpedia SPARQL Endpoin
 SELECT ?country ?population
 WHERE {
 ?country foaf:name "Switzerland"@en . 
-?country dbprop:populationCensus ?population .
+?country dbpprop:populationCensus ?population .
 
 }
 
@@ -80,7 +79,7 @@ Filter(?birth > "1955-01-01"^^xsd:date)
 Filter(?pop>100000)
 }
 Order by ?name
-Limit 1000
+Limit 2000
 
 
 
