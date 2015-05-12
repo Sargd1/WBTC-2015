@@ -113,9 +113,8 @@ WHERE{
 ?employees foaf:name ?name .
 ?employees foaf:familyName foaf:givenName .
 ?employees dbo:HireDate ?hire .
-?employees ...:Job ?job
 FILTER (?hire > "2000-01-01"^^xs:date)
-FILTER (?job = "Economist")
+
 
   }
   LIMIT 200
@@ -129,3 +128,4 @@ http://en.wikibooks.org/wiki/XQuery/DBpedia_with_SPARQL_-_Football_teams
 http://dho.ie/sites/default/files/5%20sparql%20examples.pdf
 http://www.w3.org/2001/sw/DataAccess/rq23/examples.html
 http://en.wikibooks.org/wiki/XQuery/SPARQL_Tutorial
+http://stackoverflow.com/questions/9904938/dbpedia-sparql-query-to-get-certain-values-for-a-given-city
