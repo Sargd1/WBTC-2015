@@ -59,7 +59,6 @@ WHERE {
 ?country foaf:name dbr:Switzerland . 
 ?country dbprop:populationCensus ?population .
 
-Filter (?population>10000)
 }
 
 Exercise  4  SPARQL Queries
@@ -89,12 +88,15 @@ Limit 1000
 @PREFIX owl: <http://w3.org/2002/07/owl#>
 @PREFIX dbr: <http://dbpedia.org/resource/>
 @PREFIX dbo: <http://dbpedia.org/ontology/>
- 
+@PREFIX dbp: <http://dbpedia.org/property/>
+
 SELECT ?person ?city ?name
 WHERE{
-?person a dbo:Athlete owl:Gymnast .
+?person a <http://dbpedia.org/ontology/Gymnast> .
+?person dbo:Athlete owl:Gymnast .
 ?city dbr:Switzerland .
 ?name foaf:name ?name .
+Filter(country=country:CH)
   }
   Order by ?name
   LIMIT 50
