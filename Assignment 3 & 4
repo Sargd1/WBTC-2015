@@ -30,16 +30,21 @@ foaf:member <http://crossfittb.ch> .
 Get the Central government debt, total (% of GDP) value for Switzerland for the year 2008 
 
 @PREFIX rdf: <http://worldbank.270a.info/classification/indicator.html>
+@PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 @PREFIX year: <http://reference.data.gov.uk/id/year/>
 @PREFI country: <http://worldbank.270a.info/classification/country/>
-@PREFIX region: <http://worldbank.270a.info/classification/region/>
+@PREFIX property: <http://worldbank.270a.info/property/>
 @PREFIX indicator: <http://worldbank.270a.info/classification/indicator/>
+@PREFIX region: <http://worldbank.270a.info/classification/region/>
+@PREFIX source: <http://worldbank.270a.info/classification/source/>
 
-SELECT ?value ?country ?year
+
+SELECT  ?page ?country ?year
 WHERE {
-?value a indicator:<http://worldbank.270a.info/classification/indicator/GC.DOD.TOTL.GD.ZS.html> .
+?page a sourcer:<http://worldbank.270a.info/classification/indicator/> .
+?property:indicator indicator:GC.DOD.TOTL.GD.ZS.
 ?country region:Switzerland year:2008 . 
-
+Filter(country=country:CH)
 }
 
 
@@ -51,7 +56,7 @@ Get the population census value for Switzerland using the DBpedia SPARQL Endpoin
 
 SELECT ?country ?population
 WHERE {
-?country a dbr:Switzerland . 
+?country foaf:name dbr:Switzerland . 
 ?country dbprop:populationCensus ?population .
 
 Filter (?population>10000)
