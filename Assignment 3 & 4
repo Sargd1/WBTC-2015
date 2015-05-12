@@ -101,13 +101,30 @@ Filter(country=country:CH)
   Order by ?name
   LIMIT 50
 
+@PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+@PREFIX dbr: <http://dbpedia.org/resource/>
+@PREFIX dbo: <http://dbpedia.org/ontology/>
+@PREFIX dbp: <http://dbpedia.org/property/>
 
-3
+SELECT ?name ?hire
+WHERE{
+
+?employees foaf:name ?name .
+?employees foaf:
+?employees dbo:HireDate ?hire .
 
 
 
-Resources:
+  }
+  Order by ?name
+  LIMIT 50
+
+
+
+Reference:
 http://www.snee.com/bobdc.blog/2014/04/rdf-lists-and-sparql.html
 https://code.google.com/p/tdwg-rdf/wiki/Beginners6SPARQL
 http://en.wikibooks.org/wiki/XQuery/DBpedia_with_SPARQL_-_Football_teams
 http://dho.ie/sites/default/files/5%20sparql%20examples.pdf
+http://www.w3.org/2001/sw/DataAccess/rq23/examples.html
+http://en.wikibooks.org/wiki/XQuery/SPARQL_Tutorial
