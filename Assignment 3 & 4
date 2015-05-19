@@ -48,7 +48,6 @@ WHERE {
 ?property:indicator indicator:GC.DOD.TOTL.GD.ZS.
 ?country sdmx-dimension:refPeriod year:2008 . 
 ?country sdmx-dimension:refArea ?country . 
-Filter(country=country:CH)
 }
 
 
@@ -61,7 +60,7 @@ Get the population census value for Switzerland using the DBpedia SPARQL Endpoin
 
 SELECT ?country ?population
 WHERE {
-?country foaf:name "Switzerland"@en . 
+?country foaf:name "Switzerland" . 
 ?country dbpprop:populationCensus ?population .
 
 }
