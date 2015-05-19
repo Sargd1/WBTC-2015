@@ -14,13 +14,14 @@ RDF & SPARQL
 @PREFIX dbo: <http://dbpedia.org/ontology/>
 @PREFIX wikipedia: <http://en.wikipedia.org/wiki/>
 
-httpp://dena.sargent.ch/info
+rdf:Description rdf:about="httpp://dena.sargent.ch/info"
+foaf:homepage rdf:resource <http://dena.sargent.ch>;
 
 rdf:type foaf:Person;
 
 foaf:familyName"Sargent"; foaf:givenName"Dena";
-foaf:homepage rdf:resource <http://dena.sargent.ch>;
-foaf:mbox <mailto:dena.sargent@bluewin.ch>; <mailto:sargd1@bfh.ch>;
+foaf:mbox <mailto:dena.sargent@bluewin.ch>;
+foaf:mbox <mailto:sargd1@bfh.ch>;
 foaf:interest <http://en.wikipedia.org/wiki/Wortkout>;
 foaf:interest <http://de.wikipedia.org/wiki/Crossfit_Games>;
 foaf:interest http://de.wikipedia.org/wiki/Under_Armour;
