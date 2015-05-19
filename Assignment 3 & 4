@@ -5,25 +5,28 @@ This exercise was written in the modul Web Technology at Bern University of Appl
 RDF & SPARQL
 
 3.1 RDF:
-@base http://
+
+@base http://dena.sargent.ch/
 
 @PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 @PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-@PREFIX owl: <http://w3.org/2002/07/owl#>
 @PREFIX dbr: <http://dbpedia.org/resource/>
 @PREFIX dbo: <http://dbpedia.org/ontology/>
 @PREFIX wikipedia: <http://en.wikipedia.org/wiki/>
 
+httpp://dena.sargent.ch/info
 
-rdf:type  foaf:Person .
-foaf:familyName "Sargent" foaf:givenName "Dena" .
-foaf:homepage rdf:resource <http://dena.sargent.ch> .
-foaf:mbox <mailto:dena.sargent@bluewin.ch>; <mailto:sargd1@bfh.ch> .
-foaf:interest <http://en.wikipedia.org/wiki/Wortkout>;<http://de.wikipedia.org/wiki/Crossfit_Games>;
-http://de.wikipedia.org/wiki/Under_Armour; <http://dbpedia.org/ontology/Gymnast> .
-foaf:account <http://instagram.com/sargentdena> .
-foaf: currentProject <http://github.com/Sargd1/WBTC-2015> .
-foaf:member <http://crossfittb.ch> .
+rdf:type foaf:Person;
+
+foaf:familyName"Sargent"; foaf:givenName"Dena";
+foaf:homepage rdf:resource <http://dena.sargent.ch>;
+foaf:mbox <mailto:dena.sargent@bluewin.ch>; <mailto:sargd1@bfh.ch>;
+foaf:interest <http://en.wikipedia.org/wiki/Wortkout>;
+foaf:interest <http://de.wikipedia.org/wiki/Crossfit_Games>;
+foaf:interest http://de.wikipedia.org/wiki/Under_Armour;
+foaf:account <http://instagram.com/sargentdena>;
+foaf: currentProject <http://github.com/Sargd1/WBTC-2015>;
+foaf:member <http://crossfittb.ch>;
 
 
 3.2 SPARQL:
