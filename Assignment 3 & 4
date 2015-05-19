@@ -110,6 +110,8 @@ Filter(country=country:CH)
 @PREFIX dbo: <http://dbpedia.org/ontology/>
 @PREFIX dbp: <http://dbpedia.org/property/>
 
+Give me a list of 200 names from employees which where hired in 01.January 2000.
+
 SELECT ?name ?hire
 WHERE{
 
@@ -118,11 +120,10 @@ WHERE{
 ?employees dbo:HireDate ?hire .
 FILTER (?hire > "2000-01-01"^^xs:date)
 
-
   }
   LIMIT 200
 
-Give me a list of 200 names from employees which where hired in 01.January 2000.
+
 
 Reference:
 http://www.snee.com/bobdc.blog/2014/04/rdf-lists-and-sparql.html
