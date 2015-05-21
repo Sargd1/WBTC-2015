@@ -41,16 +41,17 @@ foaf:member <http://crossfittb.ch>;
 @PREFIX region: <http://worldbank.270a.info/classification/region/>
 @PREFIX source: <http://worldbank.270a.info/classification/source/>
 @PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+@PREFIX wbld: <http://worldbank.270a.info/>
 
 SELECT  ?page ?country ?year
 WHERE {
+ 
+SERVICE <http://worldbank.270a.info/> {
 
 ?property:indicator indicator:GC.DOD.TOTL.GD.ZS.
 ?country sdmx-dimension:refPeriod year:2008 . 
 ?country sdmx-dimension:refArea ?country . 
 }
-
-
 
 Get the population census value for Switzerland using the DBpedia SPARQL Endpoint.
 
@@ -60,6 +61,9 @@ Get the population census value for Switzerland using the DBpedia SPARQL Endpoin
 
 SELECT ?country ?population
 WHERE {
+
+SERVICE <http://dbpedia.org/sparqle> {
+?country dbo:
 ?country foaf:name "Switzerland" . 
 ?country dbpprop:populationCensus ?population .
 
