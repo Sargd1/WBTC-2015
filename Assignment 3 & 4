@@ -100,7 +100,8 @@ Limit 2000
 @PREFIX dbo: <http://dbpedia.org/ontology/>
 @PREFIX dbp: <http://dbpedia.org/property/>
 
-Give me a list of names of gymnast athletes which are from Switzerland.
+Give me a list of names of gymnast athletes which are from Switzerland.The results are returned in order of the names.  
+Show at most 50 results.
 
 SELECT ?person ?city ?name
 WHERE{
