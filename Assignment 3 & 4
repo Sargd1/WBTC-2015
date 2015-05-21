@@ -63,7 +63,7 @@ SELECT ?country ?population
 WHERE {
 
 SERVICE <http://dbpedia.org/sparqle> {
-?country dbo:
+?country dbo:Country ;
 ?country foaf:name "Switzerland" . 
 ?country dbpprop:populationCensus ?population .
 
@@ -76,8 +76,10 @@ Exercise  4  SPARQL Queries
 @PREFIX dbp: <http://dbpedia.org/property/>
 @PREFIX dbr: <http://dbpedia.org/resource/>
 
-Give me a list of President names...
-
+Give me a list of President names which were born the 01. January 1955, with their population.
+The results are returned in order of the names and populations that have to be greater than 100000.
+Show at most 2000 results.
+ 
 SELECT ?name ?Place ?birth
 WHERE{
 ?President a <http://dbpedia.org/ontology/President> .
