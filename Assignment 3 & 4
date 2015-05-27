@@ -42,15 +42,19 @@ foaf:member <http://crossfittb.ch>;
 @PREFIX source: <http://worldbank.270a.info/classification/source/>
 @PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
 @PREFIX wbld: <http://worldbank.270a.info/>
+@PREFIX sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#>
+@PREFIX qb: <http://purl.org/linked-data/cube#>
 
 SELECT  ?page ?country ?year
 WHERE {
  
 SERVICE <http://worldbank.270a.info/> {
+?
+property:indicator indicator:GC.DOD.TOTL.GD.ZS.
+ sdmx-dimension:refPeriod year:2008 . 
+sdmx-dimension:refArea ?country . 
+ sdmx-measure:
 
-?property:indicator indicator:GC.DOD.TOTL.GD.ZS.
-?country sdmx-dimension:refPeriod year:2008 . 
-?country sdmx-dimension:refArea ?country . 
 }
 
 Get the population census value for Switzerland using the DBpedia SPARQL Endpoint.
@@ -63,9 +67,9 @@ SELECT ?country ?population
 WHERE {
 
 SERVICE <http://dbpedia.org/sparqle> {
-?country dbo:Country ;
-?country foaf:name "Switzerland" . 
-?country dbpprop:populationCensus ?population .
+?country a dbo:Country ;
+ foaf:name "Switzerland";
+ dbpprop:populationCensus ?population .
 
 }
 
@@ -141,3 +145,4 @@ http://dho.ie/sites/default/files/5%20sparql%20examples.pdf
 http://www.w3.org/2001/sw/DataAccess/rq23/examples.html
 http://en.wikibooks.org/wiki/XQuery/SPARQL_Tutorial
 http://stackoverflow.com/questions/9904938/dbpedia-sparql-query-to-get-certain-values-for-a-given-city
+http://digital-agenda-data.eu/data/sparql;jsessionid=5154793681AE1FB783DBE760CFD2C7A5?selectedBookmarkName=First+10+observations+of+%22Households+with+Internet+access%22&fillfrom=http%3A%2F%2Fdigital-agenda-data.eu%2Fdata%2Fsparqlbookmarks%2F2818845340682334359
