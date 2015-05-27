@@ -45,15 +45,14 @@ foaf:member <http://crossfittb.ch>;
 @PREFIX sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#>
 @PREFIX qb: <http://purl.org/linked-data/cube#>
 
-SELECT  ?page ?country ?year
+SELECT   ?country ?year
 WHERE {
- 
 SERVICE <http://worldbank.270a.info/> {
-?
-property:indicator indicator:GC.DOD.TOTL.GD.ZS.
- sdmx-dimension:refPeriod year:2008 . 
-sdmx-dimension:refArea ?country . 
- sdmx-measure:
+?obs a gb:observation ;
+?country property:indicator indicator:GC.DOD.TOTL.GD.ZS.
+?country sdmx-dimension:refPeriod year:2008 . 
+?country sdmx-dimension:refArea ?country . 
+?country sdmx-measure:obsValue ?CentralGoverDebt.
 
 }
 
