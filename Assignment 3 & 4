@@ -44,9 +44,11 @@ foaf:member <http://crossfittb.ch>;
 @PREFIX wbld: <http://worldbank.270a.info/>
 @PREFIX sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#>
 @PREFIX qb: <http://purl.org/linked-data/cube#>
+@PREFIX dbo:<http://dbpedia.org/ontology/>
+@PREFIX dbpprop: <http://dbpedia.org/property/>
+@PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT   ?country ?year
-WHERE {
+SELECT   ?country ?year WHERE {
 SERVICE <http://worldbank.270a.info/> {
 ?obs a gb:observation ;
 ?observation property:indicator indicator:GC.DOD.TOTL.GD.ZS.
@@ -54,21 +56,13 @@ SERVICE <http://worldbank.270a.info/> {
 ?observation sdmx-dimension:refArea ?country . 
 ?observation sdmx-measure:obsValue ?CentralGoverDebt.
 
-}
-
 Get the population census value for Switzerland using the DBpedia SPARQL Endpoint.
-
-@PREFIX dbo:<http://dbpedia.org/ontology/>
-@PREFIX dbpprop: <http://dbpedia.org/property/>
-@PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT ?country ?population
-WHERE {
+}
 SERVICE <http://dbpedia.org/sparqle> {
 ?country a dbo:Country ;
  foaf:name "Switzerland";
  dbpprop:populationCensus ?population .
-
+}
 }
 
 Exercise  4  SPARQL Queries
